@@ -19,7 +19,7 @@ end
 template '/var/www/html/index.html' do
 	source 'index.html.erb'
 	variables({
-		:name => node[httpd][hello][name]
+		:name => node[:httpd][:hello][:name]
 	})
 end
 
