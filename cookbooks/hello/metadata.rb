@@ -15,5 +15,4 @@ attribute "httpd/hello/name",
 	:description => "Specify who your server is saying 'hello' to.",
 	:required => "required",
 	:choice => ["World", "John", "Unknown"],
-	:default => "World",
 	:recipes => ["hello::default"]
