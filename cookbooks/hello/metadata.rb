@@ -9,3 +9,11 @@ version          '0.1.0'
 depends "rightscale"
 
 recipe "hello::default","Prints hello world output"
+
+attribute "httpd/hello/name",
+	:display_name => "Hello ____!",
+	:description => "Specify who your server is saying 'hello' to.",
+	:required => "required",
+	:choice => ["World", "John", "Unknown"],
+	:default => "World",
+	:recipes => ["hello::default"]
