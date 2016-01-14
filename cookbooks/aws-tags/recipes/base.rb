@@ -4,15 +4,21 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-marker "recipe_start_rightscale" do
-	template "rightscale_audit_entry.erb"
+def service_tag(service)
+    log "Adding service tag '#{service}'..."
+    machine_tag "ec2:service=#{service}"
 end
 
-service = node[:tagging][:service]
-deployment = node[:tagging][:deployment]
+def deployment_tag(deployment)
+    log "Adding deployment tag '#{deployment}'..."
+    machine_tag "ec2:deployment=#{deployment}"
+end
 
-log "Adding service tag '#{service}'..."
-machine_tag "ec2:service=#{service}"
-
-log "Adding deployment tag '#{deployment}'..."
-machine_tag "ec2:deployment=#{deployment}"
+if __FILE__ == $0
+	marker "recipe_start_rightscale" do
+		template "rightscale_audit_entry.erb"
+	end
+	
+	service_tag(node[:tagging][:service])
+	deployment_tag(node[:tagging][:deployment])
+end
