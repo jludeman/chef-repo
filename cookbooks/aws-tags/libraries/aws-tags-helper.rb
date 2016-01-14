@@ -1,5 +1,5 @@
-module aws_tags
-	module helper
+module AWSTags
+	module Helper
 
 		def service_tag(service)
 			log "Adding service tag '#{service}'..."

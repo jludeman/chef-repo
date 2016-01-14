@@ -8,7 +8,7 @@ marker "recipe_start_rightscale" do
 	template "rightscale_audit_entry.erb"
 end
 
-::Chef::Recipe.send(:include, aws_tags::helper)
+::Chef::Recipe.send(:include, AWSTags::Helper)
 
 service_tag(node[:tagging][:service])
 deployment_tag(node[:tagging][:deployment])

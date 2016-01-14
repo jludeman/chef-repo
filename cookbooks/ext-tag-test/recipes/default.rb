@@ -9,7 +9,7 @@
 
 include_recipe 'machine_tag'
 
-::Chef::Recipe.send(:include, aws_tags::helper)
+::Chef::Recipe.send(:include, AWSTags::Helper)
 
 service_tag(node[:tagging][:service])
 deployment_tag(node[:tagging][:deployment])
