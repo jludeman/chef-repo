@@ -1,4 +1,4 @@
-module aws-tags
+module aws_tags
 	module helper
 
 		def service_tag(service)
