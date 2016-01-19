@@ -4,7 +4,7 @@ An example cookbook for using the library in aws-tags to set up manual tagging.
 
 Requirements
 ------------
-#### packages
+#### cookbooks
 - `aws-tags` - ext-tag-example needs aws-tags to use its library tagging functions. Make sure to add the dependency to your metadata.rb
 
 Usage
