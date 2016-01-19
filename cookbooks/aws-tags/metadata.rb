@@ -58,6 +58,14 @@ attribute "tagging/technical_role/development",
     :choice => ["Development", "LiveOps", "Preproduction", "Scratch", "Staging", "Submission", "QA"],
     :recipes => ["aws-tags::development"]
 
+# Logging Tag Inputs
+#attribute "tagging/technical_role/logging",
+#    :display_name => "Technical Role Tag",
+#    :description => "Sets technical role tag for this server.",
+#    :required => "required",
+#    :choice => [],
+#    :recipes => ["aws-tags::logging"]
+
 # Sparx Admin Server Tag Inputs
 attribute "tagging/functional_role/sparx_admin_server",
     :display_name => "Functional Role Tag",
@@ -79,14 +87,6 @@ attribute "tagging/technical_role/sparx_admin_server/application",
     :required => "recommended",
     :choice => ["API", "Daemons", "Push", "Worker"],
     :recipes => ["aws-tags::sparx-admin-server"]
-
-# Logging Tag Inputs
-#attribute "tagging/technical_role/logging",
-#    :display_name => "Technical Role Tag",
-#    :description => "Sets technical role tag for this server.",
-#    :required => "required",
-#    :choice => [],
-#    :recipes => ["aws-tags::logging"]
 
 # VPN Tag Inputs
 #attribute "tagging/technical_role/vpn",
