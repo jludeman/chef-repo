@@ -1,68 +1,21 @@
-ext-tag-test Cookbook
+ext-tag-example Cookbook
 =====================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+An example cookbook for using the library in aws-tags to set up manual tagging.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - ext-tag-test needs toaster to brown your bagel.
-
-Attributes
-----------
-TODO: List your cookbook attributes here.
-
-e.g.
-#### ext-tag-test::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['ext-tag-test']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+#### cookbooks
+- `aws-tags` - ext-tag-example needs aws-tags to use its library tagging functions. Make sure to add the dependency to your metadata.rb
 
 Usage
 -----
-#### ext-tag-test::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `ext-tag-test` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[ext-tag-test]"
-  ]
-}
-```
+#### ext-tag-example::default
+Just add this recipe and start a server to see the tags appear. View the recipe to see how the library was imported and used.
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+Unless there are better or more interesting examples, there should be no reason to add to this cookbook.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Johnathon Ludeman
